@@ -1,0 +1,76 @@
+"""
+Tugas Program Pengkom
+Nama : Benyamin Jodi Sitinjak
+NIM  : 16521055
+"""
+###nomor 1
+print("Program Menghitung Jarak")
+print() ###hanya membuat spasi dari judul pak
+velocity = float(input("Masukkan kecepatan benda (dalam m/s) : "))
+waktu = float(input("Masukkan waktu tempuh (dalam s) : "))
+jarak_tempuh = velocity*waktu
+if jarak_tempuh < 0:
+    jarak_tempuh = -jarak_tempuh ###jarak hasilnya selalu positif
+print("Jarak yang ditempuh adalah", jarak_tempuh, "m")
+    
+###nomor 2
+print("Program Menghitung Keliling Lingkaran")
+print()
+print ("Input bilangan positif")
+jari_jari_lingkaran= float(input("Masukkan jari-jari lingkaran :"))
+while jari_jari_lingkaran < 0 :
+    jari_jari_lingkaran= float(input("Masukkan jari-jari lingkaran lagi:"))
+keliling_lingkaran= 2*jari_jari_lingkaran*3.14
+print("Keliling lingkaran adalah:", keliling_lingkaran, "satuan panjang")
+###fungsi while digunakan untuk menolak input bilangan negatif yang tidak mungkin terjadi untuk panjang jari-jari lingkaran
+
+### nomor 3
+print("Program Menghitung Luas Segitiga")
+print()
+alas_segitiga= float(input("Masukkan panjang alas segitiga :"))
+while alas_segitiga < 0 : 
+    alas_segitiga= float(input("Masukkan panjang alas segitiga lagi :"))
+tinggi_segitiga= float(input("Masukkan panjang tinggi segitiga :"))
+while tinggi_segitiga < 0:
+    tinggi_segitiga= float(input("Masukkan panjang tinggi segitiga lagi:"))
+luas_segitiga=0.5*alas_segitiga*tinggi_segitiga
+print("Luas segitiga adalah:", luas_segitiga, "satuan luas")
+###fungsi while digunakan untuk menolak input bilangan negatif yang tidak mungkin terjadi untuk panjang alas dan tinggi segitiga
+
+###nomor 4
+print("Program Menghitung Tinggi Rata-Rata")
+print()
+n = 5
+data = []
+sum_data = 0
+
+for i in range(0, n):
+    temp = int(input("Masukkan data ke-%d: " % (i+1)))
+    data.append(temp)
+    while temp < 0 :
+         temp = int(input("Masukkan data ke-%d lagi: " % (i+1)))
+    sum_data += data[i]
+    rata2 = sum_data / n
+
+print("\nRata-rata  = %0.2f" % rata2)
+###Fungsi while digunakan untuk menolak input bilangan negatif karena tinggi tidak mungkin negatif
+###Apabila kesalahan input terjadi akan merusak hasil rata-rata
+
+###nomor 5
+print("Program Toko Kelereng")
+print() 
+print("Berikut Daftar Harga Kelerang " 
+      "\nMerah : 10 sen " 
+      "\nHijau : 15 sen"
+      "\nHitam : 20 sen")
+kelereng_merah= int(input("Jumlah kelerang merah yang ingin anda beli : "))
+while kelereng_merah < 0:
+    kelereng_merah= int(input("Jumlah kelerang merah yang ingin anda beli : "))
+kelereng_hijau= int(input("Jumlah kelerang hijau yang ingin anda beli : "))
+while kelereng_hijau < 0:
+    kelereng_hijau= int(input("Jumlah kelerang hijau yang ingin anda beli : "))
+kelereng_hitam= int(input("Jumlah kelerang hitam yang ingin anda beli : "))
+while kelereng_hitam < 0:
+    kelereng_hitam= int(input("Jumlah kelerang hitam yang ingin anda beli : "))
+print("Anda harus membayar sebesar : ", kelereng_merah*10 + kelereng_hijau*15 + kelereng_hitam*20, "sen")
+###fungsi while digunakan untuk menolak input bilangan negatif yang tidak mungkin terjadi untuk jumlah kelereng
